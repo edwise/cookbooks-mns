@@ -1,4 +1,4 @@
-package com.edwise.pocs.springrest.entity;
+package com.edwise.cookbook.swaggerexample.entity;
 
 import org.junit.Test;
 

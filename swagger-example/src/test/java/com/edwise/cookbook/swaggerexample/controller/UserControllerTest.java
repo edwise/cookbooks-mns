@@ -1,7 +1,7 @@
-package com.edwise.pocs.springrest.controller;
+package com.edwise.cookbook.swaggerexample.controller;
 
-import com.edwise.pocs.springrest.entity.User;
-import com.edwise.pocs.springrest.service.UserService;
+import com.edwise.cookbook.swaggerexample.entity.User;
+import com.edwise.cookbook.swaggerexample.service.UserService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;

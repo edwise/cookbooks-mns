@@ -1,7 +1,7 @@
-package com.edwise.pocs.springrest.service.impl;
+package com.edwise.cookbook.swaggerexample.service.impl;
 
-import com.edwise.pocs.springrest.entity.User;
-import com.edwise.pocs.springrest.service.UserService;
+import com.edwise.cookbook.swaggerexample.entity.User;
+import com.edwise.cookbook.swaggerexample.service.UserService;
 import org.springframework.stereotype.Service;
 
 import java.util.Arrays;

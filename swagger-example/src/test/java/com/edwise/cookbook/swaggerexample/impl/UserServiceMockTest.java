@@ -1,8 +1,8 @@
-package com.edwise.pocs.springrest.impl;
+package com.edwise.cookbook.swaggerexample.impl;
 
-import com.edwise.pocs.springrest.entity.User;
-import com.edwise.pocs.springrest.service.UserService;
-import com.edwise.pocs.springrest.service.impl.UserServiceMock;
+import com.edwise.cookbook.swaggerexample.entity.User;
+import com.edwise.cookbook.swaggerexample.service.UserService;
+import com.edwise.cookbook.swaggerexample.service.impl.UserServiceMock;
 import org.junit.Before;
 import org.junit.Test;
 

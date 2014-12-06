@@ -1,4 +1,4 @@
-package com.edwise.pocs.springrest;
+package com.edwise.cookbook.swaggerexample;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

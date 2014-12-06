@@ -1,6 +1,6 @@
-package com.edwise.pocs.springrest.service;
+package com.edwise.cookbook.swaggerexample.service;
 
-import com.edwise.pocs.springrest.entity.User;
+import com.edwise.cookbook.swaggerexample.entity.User;
 
 import java.util.List;
 
