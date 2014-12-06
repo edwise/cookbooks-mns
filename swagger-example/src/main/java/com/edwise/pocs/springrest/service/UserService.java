@@ -15,4 +15,6 @@ public interface UserService {
     User update(User user);
 
     void delete(Long id);
+
+    boolean exists(Long id);
 }

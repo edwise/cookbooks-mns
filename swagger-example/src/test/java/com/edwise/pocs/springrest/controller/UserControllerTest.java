@@ -133,9 +133,11 @@ public class UserControllerTest {
     @Test
     public void deleteUser() {
         doNothing().when(userService).delete(anyLong());
+        when(userService.exists(USER_ID_12)).thenReturn(Boolean.TRUE);
 
         userController.deleteUser(USER_ID_12);
 
+        verify(userService).exists(USER_ID_12);
         verify(userService).delete(USER_ID_12);
     }
 

@@ -66,4 +66,9 @@ public class UserServiceMock implements UserService {
     public void delete(Long id) {
         // delete user by id
     }
+
+    @Override
+    public boolean exists(Long id) {
+        return Boolean.TRUE;
+    }
 }

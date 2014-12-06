@@ -12,6 +12,7 @@ import static org.hamcrest.Matchers.hasSize;
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertThat;
+import static org.junit.Assert.assertTrue;
 
 public class UserServiceMockTest {
     private static final long USER_ID_12 = 12l;
@@ -65,6 +66,13 @@ public class UserServiceMockTest {
     @Test
     public void delete() {
         userService.delete(USER_ID_12);
+    }
+
+    @Test
+    public void exists() {
+        boolean exists = userService.exists(USER_ID_12);
+
+        assertThat(exists, is(Boolean.TRUE));
     }
 
     private User createUser(Long id, String name, Integer type, String phone) {
