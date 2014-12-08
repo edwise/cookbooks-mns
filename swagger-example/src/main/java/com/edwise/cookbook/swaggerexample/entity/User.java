@@ -15,7 +15,7 @@ public class User {
     @ApiModelProperty(value = "The type of the user", required = true, position = 3, allowableValues = "1, 2, 3")
     private Integer type;
 
-    @ApiModelProperty(value = "The id of the book", required = false, position = 4)
+    @ApiModelProperty(value = "The phone of the user", required = false, position = 4)
     private String phone;
 
     public Long getId() {
