@@ -1,10 +1,21 @@
 package com.edwise.cookbook.swaggerexample.entity;
 
+import com.wordnik.swagger.annotations.ApiModel;
+import com.wordnik.swagger.annotations.ApiModelProperty;
+
+@ApiModel(value = "User entity", description = "Complete info of a user entity for mns-cookbooks")
 public class User {
 
+    @ApiModelProperty(value = "The id of the user", required = true, position = 1)
     private Long id;
+
+    @ApiModelProperty(value = "The full name of the user", required = true, position = 2)
     private String name;
+
+    @ApiModelProperty(value = "The type of the user", required = true, position = 3, allowableValues = "1, 2, 3")
     private Integer type;
+
+    @ApiModelProperty(value = "The id of the book", required = false, position = 4)
     private String phone;
 
     public Long getId() {
