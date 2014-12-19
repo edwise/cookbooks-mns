@@ -1,19 +1,27 @@
 package com.edwise.cookbook.lombokexample;
 
-import com.edwise.cookbook.lombokexample.nolombok.UserNoLombok;
 import org.junit.Test;
 
-import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.fail;
 
 public class UserTest {
 
     @Test
     public void testUserToString() {
         // TODO ...
-        UserNoLombok user = new UserNoLombok();
+//        UserLombok userLombok = new UserLombok();
+//        UserNoLombok userNoLombok = new UserNoLombok();
+//
+//        String userLombokToString = userLombok.toString();
+//        String userNoLombokToString = userNoLombok.toString();
+//
+//        assertNotNull(userLombokToString);
+//        assertNotNull(userNoLombokToString);
+    }
 
-        String userToString = user.toString();
-
-        assertNotNull(userToString);
+    @Test
+    public void testNonNullName() {
+//        UserLombok user = new UserLombok();
+        fail("Not yet implemented");
     }
 }
