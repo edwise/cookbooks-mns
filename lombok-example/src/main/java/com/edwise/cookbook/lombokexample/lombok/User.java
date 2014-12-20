@@ -12,7 +12,7 @@ import java.time.LocalDate;
 @Accessors(chain = true)
 @AllArgsConstructor
 @NoArgsConstructor
-public class UserLombok {
+public class User {
 
     private long id;
 

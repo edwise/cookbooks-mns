@@ -2,7 +2,7 @@ package com.edwise.cookbook.lombokexample.nolombok;
 
 import java.time.LocalDate;
 
-public class UserNoLombok {
+public class User {
 
     private long id;
     private String name;
@@ -11,10 +11,11 @@ public class UserNoLombok {
     private LocalDate birthday;
     private int type;
 
-    public UserNoLombok() {
+    public User() {
     }
 
-    public UserNoLombok(long id, String name, String surname, String phone, LocalDate birthday, int type) {
+    public User(long id, String name, String surname, String phone, LocalDate birthday, int type) {
+        validateName(name);
         this.id = id;
         this.name = name;
         this.surname = surname;
@@ -27,16 +28,18 @@ public class UserNoLombok {
         return id;
     }
 
-    public UserNoLombok setId(long id) {
+    public User setId(long id) {
         this.id = id;
         return this;
     }
 
     public String getName() {
+        validateName(name);
         return name;
     }
 
-    public UserNoLombok setName(String name) {
+    public User setName(String name) {
+        validateName(name);
         this.name = name;
         return this;
     }
@@ -45,7 +48,7 @@ public class UserNoLombok {
         return surname;
     }
 
-    public UserNoLombok setSurname(String surname) {
+    public User setSurname(String surname) {
         this.surname = surname;
         return this;
     }
@@ -54,7 +57,7 @@ public class UserNoLombok {
         return phone;
     }
 
-    public UserNoLombok setPhone(String phone) {
+    public User setPhone(String phone) {
         this.phone = phone;
         return this;
     }
@@ -63,7 +66,7 @@ public class UserNoLombok {
         return birthday;
     }
 
-    public UserNoLombok setBirthday(LocalDate birthday) {
+    public User setBirthday(LocalDate birthday) {
         this.birthday = birthday;
         return this;
     }
@@ -72,7 +75,7 @@ public class UserNoLombok {
         return type;
     }
 
-    public UserNoLombok setType(int type) {
+    public User setType(int type) {
         this.type = type;
         return this;
     }
@@ -82,10 +85,10 @@ public class UserNoLombok {
         if (this == o) {
             return true;
         }
-        if (!(o instanceof UserNoLombok)) {
+        if (!(o instanceof User)) {
             return false;
         }
-        UserNoLombok userLombok = (UserNoLombok) o;
+        User userLombok = (User) o;
 
         return id == userLombok.id && type == userLombok.type &&
                 !(birthday != null ? !birthday.equals(userLombok.birthday) : userLombok.birthday != null) &&
@@ -116,5 +119,11 @@ public class UserNoLombok {
                 ", birthday=" + birthday +
                 ", type=" + type +
                 '}';
+    }
+
+    private void validateName(String name) {
+        if (name == null) {
+            throw new NullPointerException("The name is null!");
+        }
     }
 }
