@@ -51,18 +51,20 @@ public class Book {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
         Book book = (Book) o;
 
-        if (id != book.id) return false;
-        if (authorName != null ? !authorName.equals(book.authorName) : book.authorName != null) return false;
-        if (isbn != null ? !isbn.equals(book.isbn) : book.isbn != null) return false;
-        if (name != null ? !name.equals(book.name) : book.name != null) return false;
-        if (releaseDate != null ? !releaseDate.equals(book.releaseDate) : book.releaseDate != null) return false;
+        return id == book.id &&
+                !(authorName != null ? !authorName.equals(book.authorName) : book.authorName != null) &&
+                !(isbn != null ? !isbn.equals(book.isbn) : book.isbn != null) &&
+                !(name != null ? !name.equals(book.name) : book.name != null) &&
+                !(releaseDate != null ? !releaseDate.equals(book.releaseDate) : book.releaseDate != null);
 
-        return true;
     }
 
     @Override
