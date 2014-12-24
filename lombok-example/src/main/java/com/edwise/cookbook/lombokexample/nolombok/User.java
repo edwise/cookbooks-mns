@@ -34,7 +34,6 @@ public class User {
     }
 
     public String getName() {
-        validateName(name);
         return name;
     }
 
